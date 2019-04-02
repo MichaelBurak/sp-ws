@@ -25,8 +25,9 @@ public class UserController {
         return "updateUser called";
     }
 
-    @DeleteMapping
-    public String deleteUser(){
-        return "deleteUser called";
+    //with id passed to path
+    @DeleteMapping(path="/{userId}")
+    public String deleteUser(@PathVariable String userId){
+        return "deleteUser of id" + userId + "called";
     }
 }
